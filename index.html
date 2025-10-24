@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soundarya HS | Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Celebration Container -->
+    <div class="celebration" id="celebration"></div>
+
+    <!-- Hidden Navigation -->
+    <nav class="hidden-nav">
+      <div class="nav-icon" data-title="Home">
+        <i class="fas fa-home"></i>
+      </div>
+      <div class="nav-icon" data-title="About">
+        <i class="fas fa-user-secret"></i>
+      </div>
+      <div class="nav-icon" data-title="Timeline">
+        <i class="fas fa-stream"></i>
+      </div>
+      <div class="nav-icon" data-title="Skills">
+        <i class="fas fa-cogs"></i>
+      </div>
+      <div class="nav-icon" data-title="Work">
+        <i class="fas fa-briefcase"></i>
+      </div>
+    
+      <div class="nav-icon" data-title="contact">
+        <i class="fas fa-terminal"></i>
+      </div>
+    </nav>
+
+    <!-- Easter Egg Trigger -->
+    <div class="easter-egg">
+      <i class="fas fa-question"></i>
+    </div>
+
+    <!-- Secret Modal -->
+    <div class="secret-modal">
+      <div class="modal-content">
+        <div class="close-modal">
+          <i class="fas fa-times"></i>
+        </div>
+        <h2>Secret Unlocked</h2>
+        <p>
+          You've discovered my hidden passion for creating mysterious digital
+          experiences!
+        </p>
+        <p>
+          This curiosity and attention to detail is what I bring to every
+          project.
+        </p>
+        <p class="glitch" data-text="Congratulations!">Congratulations!</p>
+        <div class="details-btn-container">
+          <button class="project-details-btn" id="secret-close">
+            Continue Exploring
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Access Denied Modal -->
+    <div class="access-modal">
+      <div class="access-content">
+        <h2 class="access-title">ACCESS DENIED</h2>
+        <p class="access-text">
+          You must first "Enter the Void" to access this content.<br />Initiate
+          the sequence from the main terminal.
+        </p>
+        <button class="access-btn">Acknowledge</button>
+      </div>
+    </div>
+
+    <!-- Hidden Password Section -->
+    <div class="hidden-section" id="password-section">
+      <div class="hidden-section-content">
+        <h2>Restricted Access</h2>
+        <p>Enter the secret code to proceed:</p>
+        <input
+          type="password"
+          class="password-input"
+          placeholder="Enter code"
+        />
+        <p class="password-hint">
+          Hint: Send a message through the contact form to receive the code
+        </p>
+        <div>
+          <button class="submit-btn" id="submit-password">Submit</button>
+          <button class="project-details-btn" id="close-password">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Modals -->
+    <div class="project-modal" id="project1-modal">
+      <div class="modal-content">
+        <div class="close-modal">
+          <i class="fas fa-times"></i>
+        </div>
+        <h2 class="modal-title">Resume Analyzer (AI-Powered)</h2>
+        <p class="modal-desc">
+          The Resume Analyzer is an AI-powered web application that automatically analyzes resumes uploaded by users. It uses Natural Language Processing (NLP) and Machine Learning to extract key details (skills, education, experience, and achievements) and classify candidates into suitable job domains
+        </p>
+        <ul class="modal-features">
+          <li>Automated Resume Parsing: Extracts structured data such as Name, Email, Skills, and Education from raw text or PDF resumes</li>
+          <li>Natural Language Processing (NLP): Uses spaCy for text cleaning, tokenization, POS tagging, and Named Entity Recognition (NER).</li>
+          <li>Candidate Classification: Predicts job domain (e.g., Data Science, Web Development, AI/ML, etc.) using a trained ML model.</li>
+          <li>Text Preprocessing: Regex, Stopword removal, Lemmatization
+
+Feature Extraction: TF-IDF / Bag of Words
+
+Model Training: Logistic Regression / Naive Bayes / Random Forest
+
+Visualization: Matplotlib, WordCloud
+
+NER: spaCy pre-trained models</li>
+        </ul>
+        <button class="project-details-btn close-btn">Close Project</button>
+      </div>
+    </div>
+
+    <div class="project-modal" id="project2-modal">
+      <div class="modal-content">
+        <div class="close-modal">
+          <i class="fas fa-times"></i>
+        </div>
+        <h2 class="modal-title">QuickBite</h2>
+        <p class="modal-desc">
+          QuickBite is a full-stack, responsive food delivery web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack.
+It enables users to browse restaurants, explore menus, place food orders, manage their carts, and track their delivery in real-time.
+The platform is designed with a user-friendly interface, secure authentication, and efficient backend APIs for smooth end-to-end functionality.
+        </p>
+        <ul class="modal-features">
+          <strong>User Features</strong>
+          <li>Restaurant & Menu Browsing: View restaurants, cuisines, prices, and ratings dynamically fetched from MongoDB.</li>
+          <li>Cart Management: Add, update, or remove food items in a persistent shopping cart.</li>
+          <li>Order Placement: Securely place orders and receive confirmation instantly.</li>
+          <li>Real-Time Order Tracking: Track the order status — from “Preparing” → “Out for Delivery” → “Delivered”.</li>
+        </ul>
+        <button class="project-details-btn close-btn">Close Project</button>
+      </div>
+    </div>
+
+    <div class="project-modal" id="project3-modal">
+      <div class="modal-content">
+        <div class="close-modal">
+          <i class="fas fa-times"></i>
+        </div>
+        <h2 class="modal-title">ChatSphere – Real-Time Chat Application</h2>
+        <p class="modal-desc">
+         ChatSphere is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) based real-time chat application built with Socket.io for instant communication.
+It provides a seamless chatting experience through private and group conversations, live online status, and message delivery/read indicators, similar to modern chat platforms like WhatsApp or Discord.
+        </p>
+        <ul class="modal-features">
+          <li>Real-Time Messaging: Instant one-to-one and group chat functionality powered by Socket.io.</li>
+          <li>Private & Group Chats: Create or join chat rooms and interact with multiple users at once.</li>
+          <li>Online/Offline Status: See who’s currently online and active.</li>
+          <li>Message Indicators: Visual confirmation for sent, delivered, and seen messages.</li>
+          <li>User Authentication: Secure login and signup using JWT tokens.
+
+Chat History: All messages are stored and retrievable from MongoDB.
+
+Responsive UI: Optimized for smooth chat experience across devices.</li>
+        </ul>
+        <button class="project-details-btn close-btn">Close Project</button>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="hero-content">
+        <h1 class="hero-title glitch" data-text=" Hello World. I'm Soundarya H S">
+          Hello World. I'm Soundarya H S
+        </h1>
+        <p class="hero-subtitle typewriter">
+        Aspiring Sofware Engineer...
+        </p>
+        <button class="explore-btn">Open Portfolio</button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="section-title fade-in">👩‍💻 About Me</h2>
+      <div class="about-content">
+        <div class="profile-img-container fade-in">
+          <img
+            class="profile-img"
+            src="pho.jpg"
+            alt="Profile Image"
+          />
+        </div>
+        <div class="bio-text fade-in">
+            
+    <p>
+      Hi, I’m <span class="highlight">Soundarya H S</span>, a Computer Science 
+      Engineering student passionate about <span class="code">solving problems 
+      with code</span>. I specialize in 
+      <span class="highlight">C++,Python and Web Development,DSA</span> and love 
+      building impactful projects that bridge learning and real-world applications. 
+    </p>
+          <p>
+            And I am Currently(B.E., CGPA 8.7) with strong foundations in software
+development, system integration, and data science. Experienced in full-stack development, NLP, and cloud
+technologies, with hands-on projects in automation, model-based applications, and ML-based resume
+analysis.
+          </p>
+          <p>
+            Strong problem-solving skills with 50+ coding challenges solved on LeetCode and Coding Ninjas. 
+          </p>
+          <p>
+            Eager to contribute to innovative tech solutions and continuously learn in the ever-evolving field of computer science. 
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+      <h2 class="section-title fade-in">Commits in Life</h2>
+      <div class="timeline-container fade-in">
+        <div class="timeline">
+          <!-- Timeline Connector -->
+          <div class="timeline-connector"></div>
+
+          <!-- Education Timeline Items -->
+          <div class="timeline-category">
+            <div class="timeline-category-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="timeline-category-title">Education</h3>
+          </div>
+
+         
+
+          
+          <div class="timeline-item">
+            <div class="timeline-dot" data-year="2025"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2022 - Present</div>
+              <h3 class="timeline-title">Bachelor of Computer Science</h3>
+              <div class="timeline-place">East West Institute of Technology</div>
+              <p class="timeline-desc">
+                Focus on DSA,front-end development and user experience design.
+              </p>
+              <div class="timeline-hover-content">
+                <p>Discovered the intersection of code and creativity.</p>
+                <ul>
+                  <li>Developed first Resume analyser Using NLP</li>
+                  <li>Developed E-commerce platform </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+  <div class="timeline-dot" data-year="2022"></div>
+  <div class="timeline-content">
+    <div class="timeline-date">2020 - 2022</div>
+    <h3 class="timeline-title">Pre-University (PUC)</h3>
+    <div class="timeline-place">Jnanabharathi PU College, Kunigal</div>
+    <p class="timeline-desc">
+      Studied Physics, Chemistry, Mathematics, and Computer Science.
+    </p>
+    <div class="timeline-hover-content">
+      <p>Built a strong foundation in analytical and technical skills.</p>
+      <ul>
+        <li>Scored 92.03%</li>
+        <li>Represented college in coding & science fairs</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-dot" data-year="2020"></div>
+  <div class="timeline-content">
+    <div class="timeline-date">2019 - 2020</div>
+    <h3 class="timeline-title">Secondary School (SSLC)</h3>
+    <div class="timeline-place">Government High School, Ujjani</div>
+    <p class="timeline-desc">
+      Completed high school education with distinction.
+    </p>
+    <div class="timeline-hover-content">
+      <p>Laid the foundation of curiosity for technology.</p>
+      <ul>
+        <li>Scored 92.47%</li>
+        <li>Active in cultural and academic competitions</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- Skills -->
+<section id="about">
+    <h2 class="section-title fade-in">👩‍💻Skills</h2>
+  <div class="skills-list">
+    <div class="skill"><i class="fa-brands fa-python"></i> Python</div>
+    <div class="skill"><i class="fa-solid fa-code"></i> C++</div>
+    <div class="skill"><i class="fa-brands fa-html5"></i> HTML & CSS</div>
+    <div class="skill"><i class="fa-brands fa-js"></i> JavaScript</div>
+    <div class="skill"><i class="fa-solid fa-gears"></i> DSA</div>
+    <div class="skill"><i class="fa-solid fa-database"></i> MySQL</div>
+    <div class="skill"><i class="fa-solid fa-leaf"></i> MongoDB</div>
+    <div class="skill"><i class="fa-brands fa-aws"></i> AWS</div>
+    <div class="skill"><i class="fa-brands fa-git-alt"></i> Git & GitHub</div>
+    <div class="skill"><i class="fa-solid fa-language"></i> NLP</div>
+    <div class="skill"><i class="fa-solid fa-robot"></i> Machine Learning</div>
+    <div class="skill"><i class="fa-solid fa-chart-line"></i> Data Science</div>
+    <div class="skill"><i class="fa-solid fa-layer-group"></i> Streamlit</div>
+    <div class="skill"><i class="fa-brands fa-google"></i> Google Cloud</div>
+    <div class="skill"><i class="fa-solid fa-cloud"></i> Oracle Cloud</div>
+    <div class="skill"><i class="fa-solid fa-puzzle-piece"></i> Problem Solving</div>
+    <div class="skill"><i class="fa-solid fa-brain"></i> Critical Thinking</div>
+    <div class="skill"><i class="fa-solid fa-people-group"></i> Team Collaboration</div>
+    <div class="skill"><i class="fa-solid fa-comments"></i> Communication</div>
+    <div class="skill"><i class="fa-solid fa-clock"></i> Time Management</div>
+    <div class="skill"><i class="fa-solid fa-lightbulb"></i> Creativity</div>
+  </div>
+</section>
+
+
+<section id="portfolio">
+  <h2 class="section-title fade-in" style="text-align:center; color:#dfdfe2;">Certifications</h2>
+
+  <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
+    
+    <!-- Certificate 1 -->
+    <div style="width:240px; background:#0a0303; padding:15px; border-radius:12px; 
+                box-shadow:0 4px 10px rgb(124, 8, 239); text-align:center; transition:transform 0.3s;">
+      <p style="margin-top:12px; font-weight:bold; color:#f3f2f2;">AWS Cloud Foundation</p>
+      <a href="https://www.credly.com/badges/dadba44f-9101-47ad-a054-0952c037eb3f/linked_in_profile"
+         style="display:inline-block; margin-top:8px; padding:6px 12px; background:#9117f5; color:#fff; text-decoration:none; border-radius:6px; font-size:14px;">
+        Verify Badge
+      </a>
+    </div>
+
+   
+
+    <!-- Certificate 3 -->
+    <div style="width:240px; background:#0a0303; padding:15px; border-radius:12px; 
+                box-shadow:0 4px 10px rgb(124, 8, 239); text-align:center; transition:transform 0.3s;">
+      <p style="margin-top:12px; font-weight:bold; color:#f3f2f2;">Google Cloud Computing Foundations</p>
+      <a href="https://www.cloudskillsboost.google/public_profiles/65f8d45e-aaf2-4222-9b76-86db7f8e03a0/badges/17176190?utm_medium=social&utm_source=linkedin&utm_campaign"
+         style="display:inline-block; margin-top:8px; padding:6px 12px; background:#9117f5; color:#fff; text-decoration:none; border-radius:6px; font-size:14px;">
+        Verify Badge
+      </a>
+    </div>
+  
+ 
+     <!-- Certificate 2 -->
+    <div style="width:240px; background:#0a0303; padding:15px; border-radius:12px; 
+                box-shadow:0 4px 10px rgb(124, 8, 239); text-align:center; transition:transform 0.3s;">
+      <img src="oracle.jpg" alt="Oracle Certificate" 
+           style="width:100%; border-radius:8px; border:1px solid #ddd;">
+      <p style="margin-top:12px; font-weight:bold; color:#f3f2f2;">Oracle Cloud Infrastructure 2025 Certified Foundation Associate</p>
+    </div>
+
+    <!-- Certificate 4 -->
+    <div style="width:240px; background:#0a0303; padding:15px; border-radius:12px; 
+                box-shadow:0 4px 10px rgb(124, 8, 239); text-align:center; transition:transform 0.3s;">
+      <img src="AI.jpg" alt="AI Certificate" 
+           style="width:100%; border-radius:8px; border:1px solid #ddd;">
+      <p style="margin-top:12px; font-weight:bold; color:#f3f2f2;">Artificial Intelligence Primer Certification</p>
+    </div>
+
+    <!-- Certificate 5 -->
+    <div style="width:240px; background:#0a0303; padding:15px; border-radius:12px; 
+                box-shadow:0 4px 10px rgb(124, 8, 239); text-align:center; transition:transform 0.3s;">
+      <img src="Prompt.jpg" alt="Prompt Engineering Certificate" 
+           style="width:100%; border-radius:8px; border:1px solid #ddd;">
+      <p style="margin-top:12px; font-weight:bold; color:#f3f2f2;">Prompt Engineering Certification</p>
+    </div>
+
+    <!-- Certificate 6 -->
+    <div style="width:240px; background:#0a0303; padding:15px; border-radius:12px; 
+                box-shadow:0 4px 10px rgb(124, 8, 239); text-align:center; transition:transform 0.3s;">
+      <img src="deep.jpg" alt="Deep Learning Certificate" 
+           style="width:100%; border-radius:8px; border:1px solid #ddd;">
+      <p style="margin-top:12px; font-weight:bold; color:#f3f2f2;">Deep Learning for Developers</p>
+    </div>
+
+  </div>
+</section>
+
+    
+      </section>
+<section id="portfolio">
+      <h2 class="section-title fade-in">Myresume</h2>
+        <a href="SDESoundu.pdf" download style="display:inline-block; margin:15px; padding:10px 20px; background:#4CAF50; color:#fff; text-decoration:none; border-radius:6px;">
+    Download Resume
+  </a>
+</section>
+
+
+   <!-- Portfolio Section -->
+<section id="portfolio">
+  <h2 class="section-title fade-in">My Projects</h2>
+  <div class="projects-grid">
+
+    <!-- Project 1: Resume Analyzer using NLP -->
+  <div class="project-card fade-in">
+  <div class="project-content">
+    <h3 class="project-title">Resume Analyzer (AI-Powered)</h3>
+    <p class="project-desc">
+      A <strong>Streamlit-based NLP project</strong> that automatically analyzes resumes to extract and classify candidates using 
+      <strong>Natural Language Processing (NLP), Machine Learning, and Named Entity Recognition (NER)</strong>.
+    </p>
+    <button class="project-details-btn detail-btn" data-modal="project1-modal">
+     View Details
+    </button>
+  <button class="project-link-btn">
+      <a href="https://github.com/SOUNDU19/Resume-Anlyser-Project" target="_blank">GitHub</a>
+    </button >
+    
+  </div>
+</div>
+
+
+    <!-- Project 2: QuickBite Food Delivery App -->
+    <div class="project-card fade-in" data-modal="project2-modal">
+      <div class="project-content">
+        <h3 class="project-title">QuickBite – Food Delivery App</h3>
+        <p class="project-desc">
+          A responsive <strong>MERN Stack</strong> web application that allows users to browse restaurants, 
+          order food, and track deliveries in real-time. Implemented <strong>React.js, Node.js, Express.js, MongoDB</strong>, 
+          and <strong>RESTful APIs</strong> for authentication, dynamic order management, and cart functionality.
+        </p>
+        <button class="project-details-btn detail-btn" data-modal="project2-modal">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Project 3: Real-Time Chat Application -->
+    <div class="project-card fade-in" data-modal="project3-modal">
+      <div class="project-content">
+        <h3 class="project-title">ChatSphere – Real-Time Chat App</h3>
+        <p class="project-desc">
+          A full-stack <strong>MERN + Socket.io</strong> chat application enabling 
+          <strong>real-time communication</strong> with features like private/group chats, 
+          online status, and message delivery indicators. Built using <strong>React.js, Node.js, MongoDB, Express.js</strong>, 
+          and <strong>WebSocket (Socket.io)</strong> for instant updates.
+        </p>
+        <button class="project-details-btn detail-btn" data-modal="project3-modal">
+          View Details
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+   <!--Testimonials Section--> 
+    <section id="testimonials">
+      <h2 class="section-title fade-in">Social Profile</h2>
+      <div class="testimonials-container fade-in">
+        <div class="testimonials-slider">
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+          
+            </div>
+            <div class="testimonial-author">
+              <div class="author-image"></div>
+              <div class="author-details">
+                <h4>LinkdIn</h4>
+                <a href="https://www.linkedin.com/in/soundarya-h-s-4739332a6" target="_blank">Visit Profile</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+            </div>
+            <div class="testimonial-author">
+              <div class="author-image"></div>
+              <div class="author-details">
+                <h4>GitHub</h4>
+                <a href="https://github.com/SOUNDU19" target="_blank">Visit Profile</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+            </div>
+            <div class="testimonial-author">
+              <div class="author-image"></div>
+              <div class="author-details">
+                <h4>LeetCode</h4>
+                <a href="https://leetcode.com/u/soundarya090/" target="_blank">Visit Profile</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials-nav">
+          <button class="testimonial-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="testimonial-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+  <h2 class="section-title fade-in">Initiate Contact</h2>
+  <div class="terminal fade-in">
+    <div class="transmission-overlay" id="transmission-overlay">
+      <div class="transmission-content">
+        <h3>TRANSMISSION IN PROGRESS</h3>
+        <div class="transmission-progress">
+          <div class="transmission-progress-bar" id="progress-bar"></div>
+        </div>
+        <p class="monospace" id="transmission-text">
+          Initializing secure connection...
+        </p>
+        <div
+          class="secret-code-reveal"
+          id="secret-code-reveal"
+          style="display: none"
+        >
+          <p>
+            Secret code received: <span class="monospace">EN1GM4-2025</span>
+          </p>
+          <p>Use this code to unlock hidden content!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="terminal-header">
+      <div class="terminal-title">secure_connection.exe</div>
+      <div class="terminal-controls">
+        <div class="control close"></div>
+        <div class="control minimize"></div>
+        <div class="control maximize"></div>
+      </div>
+    </div>
+
+    <!-- ✅ Formspree Form -->
+    <form
+      id="contact-form"
+      action="https://formspree.io/f/xeolnrag"
+      method="POST"
+    >
+      <div class="terminal-body">
+        <p class="monospace">Establishing secure connection...</p>
+        <p class="monospace">Connection encrypted [✓]</p>
+        <p class="monospace">Enter your details to initiate contact:</p>
+
+        <div class="input-line">
+          <span class="prompt">> </span>
+          <input
+            type="text"
+            class="terminal-input"
+            placeholder="Your name"
+            name="name"
+            id="contact-name"
+            required
+          />
+        </div>
+
+        <div class="input-line">
+          <span class="prompt">> </span>
+          <input
+            type="email"
+            class="terminal-input"
+            placeholder="Your email"
+            name="email"
+            id="contact-email"
+            required
+          />
+        </div>
+
+        <div class="input-line">
+          <span class="prompt">> </span>
+          <textarea
+            class="terminal-input"
+            placeholder="Your message"
+            name="message"
+            id="contact-message"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+      </div>
+      <button class="submit-btn" id="transmit-btn" type="submit">
+        Transmit
+      </button>
+    </form>
+  </div>
+</section>
+
+<script>
+  // ✅ Contact Form + Transmission Integration
+  const form = document.getElementById("contact-form");
+  const overlay = document.getElementById("transmission-overlay");
+  const progressBar = document.getElementById("progress-bar");
+  const transmissionText = document.getElementById("transmission-text");
+  const secretCode = document.getElementById("secret-code-reveal");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Start animation
+    overlay.classList.add("active");
+    let progress = 0;
+
+    const progressInterval = setInterval(() => {
+      progress += 1;
+      progressBar.style.width = progress + "%";
+
+      if (progress === 20)
+        transmissionText.textContent = "Establishing quantum encryption...";
+      if (progress === 40)
+        transmissionText.textContent = "Routing through secure channels...";
+      if (progress === 60)
+        transmissionText.textContent = "Transmitting data packets...";
+      if (progress === 80)
+        transmissionText.textContent = "Finalizing transmission...";
+
+      if (progress >= 100) {
+        clearInterval(progressInterval);
+      }
+    }, 30);
+
+    // Send form data to Formspree
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+
+      setTimeout(async () => {
+        if (response.ok) {
+          transmissionText.textContent =
+            "✅ Transmission complete! Message received.";
+          secretCode.style.display = "block";
+
+          setTimeout(() => {
+            overlay.classList.remove("active");
+            progressBar.style.width = "0%";
+            transmissionText.textContent = "Initializing secure connection...";
+            secretCode.style.display = "none";
+            form.reset();
+          }, 4000);
+        } else {
+          transmissionText.textContent = "❌ Transmission failed. Try again.";
+          setTimeout(() => overlay.classList.remove("active"), 3000);
+        }
+      }, 3500);
+    } catch (error) {
+      transmissionText.textContent = "⚠️ Network error. Please try again.";
+      setTimeout(() => overlay.classList.remove("active"), 3000);
+    }
+  });
+</script>
+
+<script src="script.js"></script>
+</body>
+
+</html>
