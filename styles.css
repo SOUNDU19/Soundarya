@@ -1089,7 +1089,26 @@ section.visible {
 .project-link-btn:hover a {
   color: white; /* White text on hover */
 }
+<style>
+    .scroll-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      background: #111;
+      padding: 10px 0;
+    }
 
+    .scroll-container img {
+      width: 150px;
+      margin: 0 20px;
+      display: inline-block;
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
 
 
 /* Portfolio Section */
@@ -1694,4 +1713,5 @@ section.visible {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+
 }
